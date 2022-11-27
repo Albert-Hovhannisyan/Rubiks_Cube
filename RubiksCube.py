@@ -1,5 +1,7 @@
 import numpy as np
 
+from Cube import Cube
+
 class Front:
     def __init__(self):
         self.arr = np.array([
@@ -367,3 +369,5 @@ def D():
 # D()
 # U()
 # B()
+
+a = Cube()
