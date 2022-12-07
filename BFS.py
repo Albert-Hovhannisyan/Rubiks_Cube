@@ -26,24 +26,28 @@ def bfs(goal):
      
     queue.append([goal, ["Start"]])
 
-    if initial not in visited: 
-        while queue: 
-            node = queue.popleft() 
-            visited.append(node) 
+    if initial == goal:
+        return 0
+
+    while queue: 
+        node = queue.popleft()
+        if node[0] not in visited: 
+            visited.append(node[0]) 
             for i in move_list: 
                 cube = Cube(node[0])
                 perform(cube, i)
                 state = cube.get_state()
-                moves = node[1].copy()
-                moves.append(i)
+                if state not in visited:
+                    moves = node[1].copy()
+                    moves.append(i)
+                    queue.append([state, moves])
                 if initial == state:
                     print(count)
                     end = time.time()
                     print(end - start)
                     return moves
-                queue.append([state, moves])
                 count += 1
     return count 
 
-result = bfs(only)
+result = bfs(six)
 print(result)

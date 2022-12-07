@@ -424,23 +424,25 @@ goal = ["R1", "R2", "R3", "R4", "R5", "R6", "R7", "R8", "R9", "O1", "O2", "O3", 
 trial = ['O9', 'O8', 'O7', 'G2', 'R5', 'R8', 'Y7', 'B8', 'Y9', 'R9', 'O4', 'B1', 'R6', 'O5', 'B2', 'W1', 'O2', 'O1', 'O3', 'G6', 'W3', 'Y8', 'Y5', 'W6', 'W7', 'W8', 'W9', 'R1', 'W4', 'R3', 'B4', 'W5', 'B6', 'Y3', 'Y2', 'B9', 'G9', 'G8', 'G7', 'W2', 'G5', 'G4', 'G1', 'R4', 'R7', 'Y1', 'R2', 'B7', 'Y4', 'B5', 'Y6', 'G3', 'O6', 'B3']
 cube = Cube(goal)
 
+cube.UP()
+# cube.R()
+# cube.B()
 # cube.LP()
-
-cube.F()
+# cube.F2()
 # cube.B()
 # cube.U()
 # cube.R2()
 # cube.FP()
 # cube.D()
-print(cube.get_state())
+# print(cube.get_state())
 # cube.print_cube()
-
 
 # print(goal.index("R2"))
 
 # Cube(goal).get_state()
 
 function_numbers = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17]
+
 def perform(obj, i):
     match i:
         case 0:
@@ -480,7 +482,7 @@ def perform(obj, i):
         case 17:
             obj.LP()
             
-perform(cube, 0)
+# perform(cube, 0)
 
 # cube.F()
 # # cube.FP()
