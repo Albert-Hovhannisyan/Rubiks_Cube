@@ -49,5 +49,5 @@ def bfs(goal):
                 count += 1
     return count 
 
-result = bfs(six)
+result = bfs(tree)
 print(result)

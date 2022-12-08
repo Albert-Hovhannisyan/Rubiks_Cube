@@ -27,7 +27,7 @@ def idastar(scramble):
 #append the list with a list of the initial array, 0, and the heuristic
     lookup.append([scramble, 0, x, x])
 #set the limit to the heuristic
-    limit = x
+    limit = 0
 #set the "g" to 0
 #set "current_g" to 0 # done
 #set "current_h" to heuristic
@@ -66,7 +66,7 @@ def idastar(scramble):
     else:
         while current_g < 20:
             stack.put([scramble, 0, x, x])
-            while stack:
+            while stack.empty() == False:
                 parent = stack.get()
                 parent_g = parent[1]
                 for j in move_list:
@@ -113,6 +113,9 @@ def idastar(scramble):
 
 trial = ['Y7', 'G2', 'O9', 'R8', 'R5', 'O8', 'R9', 'R6', 'Y3', 'R3', 'B2', 'W1', 'R2', 'O5', 'O2', 'W9', 'O6', 'O3', 'B9', 'Y4', 'G1', 'B6', 'Y5', 'W6', 'B3', 'Y6', 'B7', 'G7', 'G4', 'G3', 'W4', 'W5', 'G6', 'B1', 'B4', 'G9', 'W7', 'G8', 'Y9', 'W8', 'G5', 'Y8', 'O1', 'O4', 'O7', 'R7', 'R4', 'R1', 'Y2', 'B5', 'W2', 'Y1', 'B8', 'W3']
 one = ['B1', 'B2', 'B3', 'R4', 'R5', 'R6', 'R7', 'R8', 'R9', 'G1', 'G2', 'G3', 'O4', 'O5', 'O6', 'O7', 'O8', 'O9', 'Y3', 'Y6', 'Y9', 'Y2', 'Y5', 'Y8', 'Y1', 'Y4', 'Y7', 'W1', 'W2', 'W3', 'W4', 'W5', 'W6', 'W7', 'W8', 'W9', 'R1', 'R2', 'R3', 'G4', 'G5', 'G6', 'G7', 'G8', 'G9', 'O1', 'O2', 'O3', 'B4', 'B5', 'B6', 'B7', 'B8', 'B9']
+two = ['R7', 'R4', 'R1', 'R8', 'R5', 'R2', 'R9', 'R6', 'R3', 'O7', 'O4', 'O1', 'O8', 'O5', 'O2', 'O9', 'O6', 'O3', 'G3', 'G6', 'G9', 'Y4', 'Y5', 'Y6', 'B9', 'B6', 'B3', 'G7', 'G4', 'G1', 'W4', 'W5', 'W6', 'B1', 'B4', 'B7', 'Y7', 'G2', 'W9', 'Y8', 'G5', 'W8', 'Y9', 'G8', 'W7', 'Y3', 'B2', 'W1', 'Y2', 'B5', 'W2', 'Y1', 'B8', 'W3']
+tree = ['Y7', 'G2', 'W9', 'R8', 'R5', 'R2', 'R9', 'R6', 'R3', 'Y3', 'B2', 'W1', 'O8', 'O5', 'O2', 'O9', 'O6', 'O3', 'B9', 'Y4', 'G3', 'B6', 'Y5', 'G6', 'B3', 'Y6', 'G9', 'G7', 'G4', 'G1', 'W4', 'W5', 'W6', 'B1', 'B4', 'B7', 'O7', 'O4', 'O1', 'Y8', 'G5', 'W8', 'Y9', 'G8', 'W7', 'R7', 'R4', 'R1', 'Y2', 'B5', 'W2', 'Y1', 'B8', 'W3']
 
-result = idastar(trial)
+
+result = idastar(tree)
 print(result)

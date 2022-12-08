@@ -17,7 +17,8 @@ def Manhatten(goal):
         return 0
 
     queue = deque()
-    visited = []
+    # visited = []
+    counter = 0
     moves = 0
     sum = 0
 
@@ -32,6 +33,7 @@ def Manhatten(goal):
                 break 
             curr = queue.popleft()
             if curr[0].index(i) == goal.index(i):
+                counter += 1
                 sum += curr[1]
                 # print(i)
                 # print(curr[1])
@@ -43,6 +45,7 @@ def Manhatten(goal):
                 state = cube.get_state()
                 statem = curr[1] + 1
                 if state.index(i) == goal.index(i):
+                    counter += 1
                     sum += statem
                     # print(i)
                     # print(statem)
@@ -52,7 +55,7 @@ def Manhatten(goal):
             if found:
                 break
         queue.clear()
-    return sum
+    return sum/counter
 
 # result = Manhatten(final)
 # print(result)
