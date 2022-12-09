@@ -55,7 +55,8 @@ def Manhatten(goal):
             if found:
                 break
         queue.clear()
-    return sum/counter
+    # for local just return sum else sum/counter
+    return sum
 
 # result = Manhatten(final)
 # print(result)
