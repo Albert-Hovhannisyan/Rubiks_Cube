@@ -420,43 +420,6 @@ def swapfacesRight(up, front, down, back, n):
 
     return [up, front, down, back]
 
-goal = ["R1", "R2", "R3", "R4", "R5", "R6", "R7", "R8", "R9", "O1", "O2", "O3", "O4", "O5", "O6", "O7", "O8", "O9", "Y1", "Y2", "Y3", "Y4", "Y5", "Y6", "Y7", "Y8", "Y9", "W1", "W2", "W3", "W4", "W5", "W6", "W7", "W8", "W9", "G1", "G2", "G3", "G4", "G5", "G6", "G7", "G8", "G9", "B1", "B2", "B3", "B4", "B5", "B6", "B7", "B8", "B9"]
-trial = ['O9', 'O8', 'O7', 'G2', 'R5', 'R8', 'Y7', 'B8', 'Y9', 'R9', 'O4', 'B1', 'R6', 'O5', 'B2', 'W1', 'O2', 'O1', 'O3', 'G6', 'W3', 'Y8', 'Y5', 'W6', 'W7', 'W8', 'W9', 'R1', 'W4', 'R3', 'B4', 'W5', 'B6', 'Y3', 'Y2', 'B9', 'G9', 'G8', 'G7', 'W2', 'G5', 'G4', 'G1', 'R4', 'R7', 'Y1', 'R2', 'B7', 'Y4', 'B5', 'Y6', 'G3', 'O6', 'B3']
-cube = Cube(goal)
-
-# cube.B()
-# cube.FP()
-# cube.D2()
-# cube.R()
-# cube.U2()
-# cube.D2()
-# cube.B()
-# cube.UP()
-# cube.F()
-# cube.R2()
-# cube.D2()
-# cube.LP()
-# cube.F2()
-# cube.B()
-# cube.UP()
-# cube.R()
-# cube.D()
-# cube.LP()
-# cube.F2()
-# cube.B()
-# cube.U()
-# cube.R2()
-# cube.FP()
-# cube.D()
-# print(cube.get_state())
-# cube.print_cube()
-
-# print(goal.index("R2"))
-
-# Cube(goal).get_state()
-
-function_numbers = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17]
-
 def perform(obj, i):
     match i:
         case 0:
@@ -495,45 +458,3 @@ def perform(obj, i):
             obj.L2()
         case 17:
             obj.LP()
-            
-# perform(cube, 0)
-
-# cube.F()
-# # cube.FP()
-
-# if(goal == cube.get_state()):
-#     print(True)
-# else:
-#     print(False)
-
-# print(goal)
-# print(cube.get_state())
-
-
-# cube.F2()
-# cube.B2()
-# cube.B2()
-# cube.L2()
-# cube.L2()
-# cube.U2()
-# cube.U2()
-# cube.R2()
-# cube.R2()
-# cube.D2()
-# cube.D2()
-
-# cube.F()
-# cube.B()
-# cube.L()
-# cube.U()
-# cube.R()
-# cube.D()
-# cube.DP()
-# cube.RP()
-# cube.UP()
-# cube.LP()
-# cube.BP()
-# cube.FP()
-
-# print(cube.get_state())
-# cube.print_cube()
